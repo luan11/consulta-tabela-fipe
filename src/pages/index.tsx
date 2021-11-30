@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
+import Search from '../templates/Search';
 
-const Home: NextPage = () => {
-  return <h1>Hello World</h1>;
-};
+const Home: NextPage = () => <Search />;
 
 export default Home;

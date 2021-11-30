@@ -9,25 +9,22 @@ const SearchContextProvider = ({ children }: ISearchContextProviderProps) => {
   const [yearId, setYearId] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<ISearchResult | null>(null);
-
-  const setFilters = (
-    vehicleType: string,
-    brandId: number,
-    modelId: number,
-    yearId: string
-  ) => {
-    setVehicleType(vehicleType);
-    setBrandId(brandId);
-    setModelId(modelId);
-    setYearId(yearId);
-  };
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   return (
     <SearchContext.Provider
       value={{
+        vehicleType,
+        brandId,
+        modelId,
+        yearId,
+        setVehicleType,
+        setBrandId,
+        setModelId,
+        setYearId,
         isLoading,
         result,
-        setFilters,
+        errorMessage,
       }}
     >
       {children}
