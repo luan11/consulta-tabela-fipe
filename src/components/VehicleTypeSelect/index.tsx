@@ -18,8 +18,13 @@ const VehicleTypeSelect = () => {
 
   return (
     <>
-      <Typography gutterBottom>Tipo</Typography>
-      <Grid container spacing={2} gap={2} sx={{ width: `100%`, margin: 0 }}>
+      <Typography gutterBottom>Consultar por</Typography>
+      <Grid
+        container
+        spacing={2}
+        gap={2}
+        sx={{ width: `100%`, margin: `0 0 16px` }}
+      >
         <VehicleTypeSelectItem
           isSelected={isSelected(`cars`)}
           icon={<AiFillCar />}

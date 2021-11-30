@@ -9,4 +9,5 @@ export const Wrapper = styled(Box)`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme: { palette } }) => palette.grey[100]};
+  overflow-y: auto;
 `;
