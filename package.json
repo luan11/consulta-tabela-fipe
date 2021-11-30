@@ -8,12 +8,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.2.2",
+    "@mui/styled-engine-sc": "^5.1.0",
     "@types/styled-components": "^5.1.15",
     "axios": "^0.24.0",
     "next": "12.0.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@types/node": "16.11.10",
