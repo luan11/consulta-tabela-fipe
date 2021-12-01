@@ -20,6 +20,8 @@ export interface ISearchContextProps {
   isLoading: boolean;
   result: ISearchResult | null;
   errorMessage: string | null;
+  doSearch: () => void;
+  searchAgain: () => void;
 }
 
 export interface ISearchContextProviderProps {

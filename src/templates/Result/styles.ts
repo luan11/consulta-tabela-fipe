@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import Card from '@mui/material/Card';
 
-export const Form = styled(Card).attrs({
-  component: `form`,
-})`
+export const Wrapper = styled(Card)`
   width: 40%;
 
   @media (max-width: 991px) {

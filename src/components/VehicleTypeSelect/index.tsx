@@ -23,6 +23,7 @@ const VehicleTypeSelect = () => {
         container
         spacing={2}
         gap={2}
+        justifyContent="space-between"
         sx={{ width: `100%`, margin: `0 0 16px` }}
       >
         <VehicleTypeSelectItem
