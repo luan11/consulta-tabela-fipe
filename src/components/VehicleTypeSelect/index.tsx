@@ -1,5 +1,5 @@
 import { FormEvent } from 'react';
-import { Grid, Typography } from '@mui/material';
+import Typography from '@mui/material/Typography';
 import { blue, red, green } from '@mui/material/colors';
 import { AiFillCar } from 'react-icons/ai';
 import { FaMotorcycle } from 'react-icons/fa';
@@ -7,6 +7,8 @@ import { ImTruck } from 'react-icons/im';
 
 import useSearchContext from '../../hooks/useSearchContext';
 import VehicleTypeSelectItem from '../VehicleTypeSelectItem';
+
+import { Container } from './styles';
 
 const VehicleTypeSelect = () => {
   const { vehicleType, setVehicleType } = useSearchContext();
@@ -19,13 +21,7 @@ const VehicleTypeSelect = () => {
   return (
     <>
       <Typography gutterBottom>Consultar por</Typography>
-      <Grid
-        container
-        spacing={2}
-        gap={2}
-        justifyContent="space-between"
-        sx={{ width: `100%`, margin: `0 0 16px` }}
-      >
+      <Container container gap={2}>
         <VehicleTypeSelectItem
           isSelected={isSelected(`cars`)}
           icon={<AiFillCar />}
@@ -50,7 +46,7 @@ const VehicleTypeSelect = () => {
           value="trucks"
           handleOnChange={handleOnChange}
         />
-      </Grid>
+      </Container>
     </>
   );
 };

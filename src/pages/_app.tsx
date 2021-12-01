@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { AppProps } from 'next/app';
 import { SearchContextProvider } from '../contexts/SearchContext';
 import { ThemeProvider } from 'styled-components';
@@ -8,15 +9,20 @@ import Main from '../components/Main';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <SearchContextProvider>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Header />
-        <Main>
-          <Component {...pageProps} />
-        </Main>
-      </ThemeProvider>
-    </SearchContextProvider>
+    <>
+      <Head>
+        <title>Tabela FIPE</title>
+      </Head>
+      <SearchContextProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Header />
+          <Main>
+            <Component {...pageProps} />
+          </Main>
+        </ThemeProvider>
+      </SearchContextProvider>
+    </>
   );
 }
 
