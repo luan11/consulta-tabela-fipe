@@ -56,7 +56,7 @@ const Result = () => {
           fullWidth
           onClick={searchAgain}
         >
-          Voltar
+          Realizar outra consulta
         </Button>
       </CardContent>
     </Wrapper>
